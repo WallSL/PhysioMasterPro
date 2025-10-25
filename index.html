@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fisioterapia Domiciliar | PhysioMaster Pro</title>
+  <meta name="description" content="Conheça a PhysioMaster Pro, serviço de fisioterapia domiciliar em Curitiba e região, com atendimento humanizado e planos personalizados." />
+  <style>
+    :root {
+      --primary-color: #1f7a8c;
+      --secondary-color: #168aad;
+      --accent-color: #f2bb05;
+      --background-color: #f7fbfc;
+      --text-color: #1f2933;
+      --muted-text: #6c7a89;
+      --card-shadow: 0 15px 25px rgba(31, 41, 51, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      background: var(--background-color);
+      color: var(--text-color);
+      padding: 0;
+      margin: 0;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      color: #fff;
+      padding: 80px 20px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::after {
+      content: "";
+      position: absolute;
+      top: -100px;
+      right: -120px;
+      width: 260px;
+      height: 260px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 20px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    main {
+      padding: 60px 20px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    section {
+      margin-bottom: 60px;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 18px;
+      padding: 30px;
+      box-shadow: var(--card-shadow);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 35px rgba(22, 138, 173, 0.2);
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      position: relative;
+      display: inline-block;
+    }
+
+    h2::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -10px;
+      width: 60px;
+      height: 4px;
+      background: var(--accent-color);
+      border-radius: 2px;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    ul li {
+      margin-bottom: 12px;
+      padding-left: 28px;
+      position: relative;
+    }
+
+    ul li::before {
+      content: '\2713';
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--secondary-color);
+      font-weight: bold;
+    }
+
+    .highlight {
+      background: #fff;
+      border-left: 6px solid var(--accent-color);
+      padding: 24px;
+      border-radius: 12px;
+      box-shadow: var(--card-shadow);
+    }
+
+    .cta {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 16px;
+      padding: 40px;
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: var(--card-shadow);
+    }
+
+    .cta a {
+      display: inline-block;
+      background: var(--accent-color);
+      color: var(--text-color);
+      text-decoration: none;
+      font-weight: bold;
+      padding: 14px 28px;
+      border-radius: 999px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .cta a:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 25px rgba(242, 187, 5, 0.35);
+    }
+
+    .faq {
+      display: grid;
+      gap: 18px;
+    }
+
+    .faq-item {
+      background: #fff;
+      border-radius: 16px;
+      padding: 20px 24px;
+      box-shadow: var(--card-shadow);
+    }
+
+    .faq-item h3 {
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+      color: var(--primary-color);
+    }
+
+    footer {
+      background: #0b3c49;
+      color: #cbe4f9;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    footer p {
+      margin-bottom: 8px;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        padding: 60px 20px;
+      }
+
+      header h1 {
+        font-size: 2.2rem;
+      }
+
+      main {
+        padding: 40px 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Fisioterapia Domiciliar que Vai Até Você</h1>
+    <p>
+      Na PhysioMaster Pro, oferecemos atendimento fisioterapêutico personalizado no conforto da sua casa,
+      com foco na sua recuperação, autonomia e bem-estar.
+    </p>
+  </header>
+
+  <main>
+    <section id="sobre">
+      <h2>Sobre Nós</h2>
+      <div class="highlight">
+        <p>
+          Somos uma equipe de fisioterapeutas especializada em atendimentos domiciliares em Curitiba e região metropolitana.
+          Combinamos conhecimento técnico, tecnologia e um olhar humanizado para construir planos terapêuticos alinhados às
+          suas necessidades e objetivos.
+        </p>
+      </div>
+    </section>
+
+    <section id="servicos">
+      <h2>Serviços Oferecidos</h2>
+      <div class="card-grid">
+        <div class="card">
+          <h3>Reabilitação Ortopédica</h3>
+          <p>
+            Tratamentos focados em pós-operatório, lesões esportivas, dores articulares e musculares com recursos modernos e exercícios funcionais.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Fisioterapia Neurológica</h3>
+          <p>
+            Atendimento especializado para AVC, Parkinson, neuropatias periféricas e condições que exigem reabilitação motora e cognitiva.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Fisioterapia Respiratória</h3>
+          <p>
+            Protocolos para fortalecimento pulmonar, higiene brônquica e prevenção de complicações respiratórias em pacientes crônicos.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Fisioterapia Preventiva</h3>
+          <p>
+            Avaliação postural, exercícios corretivos e educação em saúde para evitar dores, quedas e limitações no dia a dia.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="beneficios">
+      <h2>Por que escolher a PhysioMaster Pro?</h2>
+      <div class="card-grid">
+        <div class="card">
+          <h3>Conforto e Conveniência</h3>
+          <p>Você recebe atendimento onde se sente mais à vontade, sem deslocamentos ou salas de espera.</p>
+        </div>
+        <div class="card">
+          <h3>Planos Personalizados</h3>
+          <p>Cada plano terapêutico é exclusivo, considerando histórico clínico, rotina e metas pessoais.</p>
+        </div>
+        <div class="card">
+          <h3>Equipe Multidisciplinar</h3>
+          <p>Fisioterapeutas atualizados e parceiros de outras áreas para uma abordagem completa da sua saúde.</p>
+        </div>
+        <div class="card">
+          <h3>Resultados Mensuráveis</h3>
+          <p>Acompanhamento contínuo com relatórios de evolução e reavaliações periódicas.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="como-funciona">
+      <h2>Como Funciona</h2>
+      <div class="card-grid">
+        <div class="card">
+          <h3>1. Avaliação Inicial</h3>
+          <p>Realizamos uma avaliação completa para entender suas necessidades e objetivos de tratamento.</p>
+        </div>
+        <div class="card">
+          <h3>2. Plano de Cuidado</h3>
+          <p>Montamos um plano com frequência, técnicas e recursos adequados ao seu perfil.</p>
+        </div>
+        <div class="card">
+          <h3>3. Sessões em Casa</h3>
+          <p>Levamos todos os materiais necessários e adaptamos os exercícios ao seu ambiente.</p>
+        </div>
+        <div class="card">
+          <h3>4. Reavaliações</h3>
+          <p>Avaliamos os resultados periodicamente e ajustamos o plano para potencializar sua evolução.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="publicos">
+      <h2>Para Quem Atendemos</h2>
+      <div class="highlight">
+        <ul>
+          <li>Pessoas em reabilitação pós-cirúrgica ou pós-trauma.</li>
+          <li>Idosos que buscam manter autonomia e prevenir quedas.</li>
+          <li>Pessoas com doenças neurológicas ou respiratórias.</li>
+          <li>Atletas amadores e profissionais em fase de retorno ao esporte.</li>
+          <li>Gestantes e puérperas que desejam um cuidado seguro e acolhedor.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="depoimentos">
+      <h2>Histórias de Transformação</h2>
+      <div class="card-grid">
+        <div class="card">
+          <p>
+            "Depois da cirurgia de joelho, não conseguia subir escadas. Com a PhysioMaster Pro, recuperei a confiança e hoje voltei a caminhar no parque."
+          </p>
+          <strong>Mariana Silva, 42 anos</strong>
+        </div>
+        <div class="card">
+          <p>
+            "As sessões em casa fizeram toda a diferença para a minha mãe, que tem Parkinson. Os exercícios são adaptados e o fisioterapeuta sempre muito paciente."
+          </p>
+          <strong>João Albuquerque, 38 anos</strong>
+        </div>
+        <div class="card">
+          <p>
+            "As crises respiratórias diminuíram muito com o plano personalizado. Me sinto mais seguro e ativo no dia a dia."
+          </p>
+          <strong>Ricardo Mendes, 55 anos</strong>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <h2>Perguntas Frequentes</h2>
+      <div class="faq">
+        <div class="faq-item">
+          <h3>Qual a duração de cada sessão?</h3>
+          <p>Cada sessão dura entre 50 e 60 minutos, conforme a necessidade do tratamento.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Quais bairros vocês atendem?</h3>
+          <p>Atendemos Curitiba e região metropolitana. Consulte disponibilidade para sua localidade.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Preciso de encaminhamento médico?</h3>
+          <p>Não é obrigatório, mas caso possua laudos ou orientações médicas, utilize-os para enriquecer a avaliação.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Vocês atendem planos de saúde?</h3>
+          <p>Realizamos atendimentos particulares com emissão de recibo para reembolso. Consulte seu plano para saber as condições.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato">
+      <h2>Agende uma Avaliação</h2>
+      <div class="cta">
+        <p>
+          Entre em contato para agendar uma avaliação inicial gratuita e descobrir como podemos ajudar você a recuperar
+          sua melhor versão.
+        </p>
+        <a href="https://wa.me/554199999999" target="_blank" rel="noopener">Falar no WhatsApp</a>
+        <p>
+          Ou envie um e-mail para <a href="mailto:contato@physiomasterpro.com">contato@physiomasterpro.com</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>PhysioMaster Pro &copy; 2024 - Fisioterapia Domiciliar em Curitiba e Região</p>
+    <p>CREFITO 123456-F | Atendimento humanizado com resultados comprovados</p>
+  </footer>
+</body>
+</html>
